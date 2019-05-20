@@ -1,0 +1,44 @@
+'use strict';
+const assert = require('assert');
+const mock = require('egg-mock');
+
+describe('test/wechat.test.js', () => {
+  let app;
+  before(() => {
+    app = mock.app({
+      baseDir: 'apps/wechat-test',
+    });
+    return app.ready();
+  });
+
+  after(() => app.close());
+  afterEach(mock.restore);
+
+  it('should GET /', () => {
+    return app.httpRequest()
+      .get('/')
+      .expect('hi, wechat')
+      .expect(200);
+  });
+
+  it('获取 access token', async () => {
+    const ctx = app.mockContext();
+    const access_token = await ctx.service.miniprogram.getAccessToken();
+
+    assert(access_token.length > 0);
+  });
+  it('获取 小程序码', async () => {
+    const ctx = app.mockContext();
+
+    const access_token = await ctx.service.miniprogram.getAccessToken();
+    const image = await ctx.service.miniprogram.generateMiniProgramQRCode({
+      access_token,
+      is_hyaline: true,
+      center_image_url: 'https://sqimg.qq.com/qq_product_operations/im/qqlogo/imlogo_b.png',
+    });
+    assert(image.length > 0);
+  });
+  // test('手动测试 code2session', done => done());
+  // test('手动测试 decryptOpenData', done => done());
+  // test('手动测试 sendTemplateMessage', done => done());
+});
