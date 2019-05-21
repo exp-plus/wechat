@@ -2,12 +2,13 @@
 
 /**
  * egg-wechat default config
- * @member Config#wechat
- * @property {String} miniprogram.appid - 微信小程序id
- * @property {String} miniprogram.secret - 微信小程序密钥
+ * @member Config#miniprogram
+ * @property {String} appid - 微信小程序id
+ * @property {String} secret - 微信小程序密钥
  */
-exports.wechat = {
-  // miniprogram: {
+exports.miniprogram = {
+  // useAgent: false,
+  // client: {
   //   appid: '',
   //   secret: '',
   // },
