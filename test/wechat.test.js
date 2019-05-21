@@ -23,6 +23,7 @@ describe('test/wechat.test.js', () => {
 
   it('获取 access token', async () => {
     const ctx = app.mockContext();
+
     const access_token = await ctx.service.miniprogram.getAccessToken();
 
     assert(access_token.length > 0);
