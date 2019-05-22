@@ -39,5 +39,6 @@ describe('test/official-account.test.js', () => {
     assert(qrcode);
   });
   // it('手动测试 code2WebAccessToken', done => done());
+  // it('手动测试 refreshUserAccessToken', done => done());
   // it('手动测试 getUserInfo', done => done());
 });
