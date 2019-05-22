@@ -1,6 +1,6 @@
 {
   "name": "@exp-plus/egg-wechat",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "微信对接服务",
   "eggPlugin": {
     "name": "wechat"
@@ -45,8 +45,9 @@
   "files": [
     "app",
     "config",
-    "app.js",
-    "lib"
+    "agent.js",
+    "lib",
+    "app.js"
   ],
   "ci": {
     "version": "8, 10"
