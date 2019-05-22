@@ -7,7 +7,6 @@
  * @property {String} secret - 微信小程序密钥
  */
 exports.miniprogram = {
-  // useAgent: false,
   // client: {
   //   appid: '',
   //   secret: '',
@@ -23,7 +22,6 @@ exports.miniprogram = {
  * @property {String} domain JS 接口安全域名
  */
 exports.officialAccount = {
-  // useAgent: false,
   // client: {
   //   appID: '',
   //   appsecret: '',
