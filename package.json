@@ -1,13 +1,14 @@
 {
   "name": "@exp-plus/egg-wechat",
-  "version": "0.0.12",
-  "description": "微信对接服务",
+  "version": "0.0.14",
+  "description": "Wechat plugin for egg",
   "eggPlugin": {
     "name": "wechat"
   },
   "egg": {
     "declarations": true
   },
+  "types": "./index.d.ts",
   "keywords": [
     "egg",
     "eggPlugin",

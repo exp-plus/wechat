@@ -8,8 +8,9 @@
  */
 exports.miniprogram = {
   // client: {
-  //   appid: '',
-  //   secret: '',
+  // sync_uri: '',
+  // appid: '',
+  // secret: '',
   // },
 };
 /**
@@ -22,7 +23,10 @@ exports.miniprogram = {
  * @property {String} domain JS 接口安全域名
  */
 exports.officialAccount = {
+  app: true,
+  agent: false,
   // client: {
+  //   sync_uri: '',
   //   appID: '',
   //   appsecret: '',
   //   URL: '',
