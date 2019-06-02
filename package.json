@@ -1,6 +1,6 @@
 {
   "name": "@exp-plus/egg-wechat",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Wechat plugin for egg",
   "eggPlugin": {
     "name": "wechat"
@@ -8,6 +8,7 @@
   "egg": {
     "declarations": true
   },
+
   "types": "./index.d.ts",
   "keywords": [
     "egg",
@@ -44,6 +45,7 @@
     "autod": "autod"
   },
   "files": [
+    "index.d.ts",
     "app",
     "config",
     "agent.js",
