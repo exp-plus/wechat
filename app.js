@@ -17,7 +17,6 @@ class AppBootHook {
 
     // 监听同步小程序 access_token
     this.app.messenger.on('sync_miniprogram_access_token', access_token => {
-      console.log('sync', access_token);
       this.app.miniprogram.access_token = access_token;
       this.app.coreLogger.info('[小程序]\t\t同步 access_token：' + access_token);
     });
