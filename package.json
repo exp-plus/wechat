@@ -1,6 +1,6 @@
 {
   "name": "@exp-plus/egg-wechat",
-  "version": "0.0.15",
+  "version": "0.0.28",
   "description": "Wechat plugin for egg",
   "eggPlugin": {
     "name": "wechat"
@@ -8,7 +8,6 @@
   "egg": {
     "declarations": true
   },
-
   "types": "./index.d.ts",
   "keywords": [
     "egg",
@@ -18,8 +17,11 @@
   "dependencies": {
     "@exp-plus/exception": "^0.0.2",
     "axios": "^0.18.0",
+    "ejs": "^2.6.1",
+    "heredoc": "^1.3.1",
     "sha1": "^1.1.1",
-    "sharp": "^0.22.1"
+    "sharp": "^0.22.1",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "autod": "^3.0.1",

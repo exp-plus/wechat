@@ -23,8 +23,6 @@ exports.miniprogram = {
  * @property {String} domain JS 接口安全域名
  */
 exports.officialAccount = {
-  app: true,
-  agent: false,
   // client: {
   //   sync_uri: '',
   //   appID: '',
