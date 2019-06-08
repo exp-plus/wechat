@@ -12,10 +12,6 @@ exports.miniprogram = {
   // appid: '',
   // secret: '',
   // },
-  client: {
-    appid: 'wx7f2846e0f7b91e13',
-    secret: '5f1665bc24bf708226b6e72ed35c70ad',
-  },
 };
 /**
  * egg-official-account default config
