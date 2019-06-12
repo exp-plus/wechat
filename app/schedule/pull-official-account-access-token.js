@@ -20,7 +20,7 @@ module.exports = app => {
         access_token = await ctx.app.officialAccount.getAccessToken();
       }
       ctx.app.coreLogger.info('[公众号]\t\t拉取 access_token：' + access_token);
-      ctx.app.messenger.sendToApp('schedule_update_official_account_access_token', access_token);
+      ctx.app.messenger.sendToAgent('schedule_update_official_account_access_token', access_token);
     },
   };
 };
