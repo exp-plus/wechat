@@ -20,7 +20,7 @@ module.exports = app => {
       } else {
         access_token = await ctx.app.miniprogram.getAccessToken();
       }
-      ctx.app.coreLogger.info('[小程序]\t\t拉取 access_token' + access_token);
+      ctx.app.coreLogger.info('[小程序]\t\t拉取 access_token：' + access_token);
       ctx.app.messenger.sendToAgent('schedule_update_miniprogram_access_token', access_token);
     },
   };

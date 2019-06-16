@@ -32,3 +32,13 @@ exports.officialAccount = {
   //   domain: '',
   // },
 };
+
+
+exports.lark = {
+  // client: {
+  //   app_id: '',
+  //   app_secret: '',
+  //   open_chat_ids: [  ],
+  //   open_ids: [  ],
+  // },
+};
