@@ -36,9 +36,8 @@ exports.officialAccount = {
 
 exports.lark = {
   // client: {
-  //   app_id: '',
-  //   app_secret: '',
-  //   open_chat_ids: [  ],
-  //   open_ids: [  ],
+  // sync_uri:'',
+  // app_id: '',
+  // app_secret:'' ,
   // },
 };

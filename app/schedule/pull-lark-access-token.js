@@ -5,7 +5,7 @@ module.exports = app => {
     schedule: {
       disable: !app.config.lark.client,
       immediate: true,
-      interval: '20m',
+      interval: '40m',
       type: 'worker',
     },
     /**
@@ -14,8 +14,12 @@ module.exports = app => {
      * @param {Object} ctx 上下文对象
      */
     async task(ctx) {
-      const tenant_access_token = await ctx.app.lark.getTenantAccessToken();
-
+      let tenant_access_token = null;
+      if (app.config.lark.client.sync_uri) {
+        tenant_access_token = await ctx.curl(app.config.sync_uri);
+      } else {
+        tenant_access_token = await ctx.app.lark.getTenantAccessToken();
+      }
       ctx.app.coreLogger.info('[飞书]\t\t拉取 tenant_access_token：' + tenant_access_token);
       ctx.app.messenger.sendToAgent('schedule_update_lark_tenant_access_token', tenant_access_token);
     },

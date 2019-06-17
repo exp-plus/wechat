@@ -192,10 +192,10 @@
     urijs "^1.19.0"
     utility "^1.15.0"
 
-"@exp-plus/exception@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@exp-plus/exception/-/exception-0.0.2.tgz#ea3e068c58ef822b3f03fc49b53d67615708d3ef"
-  integrity sha512-nWuZOHEdVCCZF6xC8JkEttZrRYCXQA1QgEwBWIxcUgRpIe34nHdPL6iWfNax7SNZrFq2tqWAdzW13cn6+YcEUQ==
+"@exp-plus/exception@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@exp-plus/exception/-/exception-0.0.3.tgz#c150dbf384716ef1342371b1942702df6aa16aec"
+  integrity sha512-vwXmUZ0ogxtEHliVHj6VN7QWIN9isrykoM/2gTnWCuZUBnMpT6pnHvEXQU3xCU5tc60/jwmBusLRmwTAvUsWQA==
 
 "@jest/types@^24.8.0":
   version "24.8.0"
