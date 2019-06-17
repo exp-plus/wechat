@@ -1,6 +1,6 @@
 {
   "name": "@exp-plus/egg-wechat",
-  "version": "0.0.42",
+  "version": "0.0.44",
   "description": "Wechat plugin for egg",
   "eggPlugin": {
     "name": "wechat"
