@@ -16,7 +16,7 @@ module.exports = app => {
     async task(ctx) {
       let access_token;
       if (app.config.miniprogram.client.sync_uri) {
-        access_token = await ctx.curl(app.config.sync_uri);
+        access_token = await ctx.curl(app.config.miniprogram.client.sync_uri);
       } else {
         access_token = await ctx.app.miniprogram.getAccessToken();
       }
