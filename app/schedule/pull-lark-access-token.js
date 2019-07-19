@@ -16,7 +16,10 @@ module.exports = app => {
     async task(ctx) {
       let tenant_access_token = null;
       if (app.config.lark.client.sync_uri) {
-        tenant_access_token = await ctx.curl(app.config.lark.client.sync_uri);
+        const { data } = await ctx.curl(app.config.lark.client.sync_uri, {
+          dataType: 'text',
+        });
+        tenant_access_token = data;
       } else {
         tenant_access_token = await ctx.app.lark.getTenantAccessToken();
       }

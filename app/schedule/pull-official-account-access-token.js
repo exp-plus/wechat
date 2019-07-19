@@ -15,7 +15,10 @@ module.exports = app => {
     async task(ctx) {
       let access_token;
       if (app.config.officialAccount.client.sync_uri) {
-        access_token = await ctx.curl(app.config.officialAccount.client.sync_uri);
+        const { data } = await ctx.curl(app.config.officialAccount.client.sync_uri, {
+          dataType: 'text',
+        });
+        access_token = data;
       } else {
         access_token = await ctx.app.officialAccount.getAccessToken();
       }
