@@ -23,6 +23,7 @@ class AgentBootHook {
     // 小程序
     this.agent.messenger.on('schedule_update_miniprogram_access_token', access_token => {
       this.agent.miniprogram.access_token = access_token;
+      this.agent.messenger.sendToApp('sync_miniprogram_access_token', this.agent.miniprogram.access_token);
       this.agent.coreLogger.info('[小程序]\t\t同步 access_token：' + access_token);
     });
     this.agent.messenger.on('ask_for_miniprogram_access_token', async () => {
@@ -35,6 +36,7 @@ class AgentBootHook {
     this.agent.messenger.on('schedule_update_official_account_access_token', access_token => {
       this.agent.officialAccount.access_token = access_token;
       this.agent.coreLogger.info('[公众号]\t\t同步 access_token：' + access_token);
+      this.agent.messenger.sendToApp('sync_official_account_access_token', this.agent.officialAccount.access_token);
     });
     this.agent.messenger.on('ask_for_official_account_access_token', async () => {
       while (!this.agent.officialAccount.access_token) await sleep(1000);
@@ -45,6 +47,7 @@ class AgentBootHook {
     this.agent.messenger.on('schedule_update_lark_tenant_access_token', tenant_access_token => {
       this.agent.lark.tenant_access_token = tenant_access_token;
       this.agent.coreLogger.info('[飞书]\t\t同步 tenant_access_token：' + tenant_access_token);
+      this.agent.messenger.sendToApp('sync_lark_tenant_access_token', this.agent.lark.tenant_access_token);
     });
 
     // 新开进程请求 access_token
