@@ -18,8 +18,8 @@ exports.miniprogram = {
  * @member Config#official-account
  * @property {String} appID - 公众号id
  * @property {String} appsecret - 公众号密钥
- * @property {String} URL ?
- * @property {String} Token ?
+ * @property {String} URL 服务器认证
+ * @property {String} Token 服务器认证
  * @property {String} domain JS 接口安全域名
  */
 exports.officialAccount = {
