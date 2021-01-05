@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@exp-plus/exception": "^0.0.3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "ejs": "^2.6.1",
     "heredoc": "^1.3.1",
     "sha1": "^1.1.1",
